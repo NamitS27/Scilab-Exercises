@@ -1,0 +1,1 @@
+This repository is to practice the concepts of signals and systems using a software called "SCILAB"
