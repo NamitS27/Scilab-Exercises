@@ -1,0 +1,30 @@
+clear;
+clc;
+clf;
+N = 20;
+fc = 0.05;
+f = 100;
+T = 1/f;
+fs = 5000;
+c = ffilt("lp", N, fc);
+dw = 0.01;
+w = 0 : dw : 2*%pi;
+fd = w/(2*%pi);
+H = zeros(length(w));
+for i = 0 : N-1
+    H = H + c(i+1)*exp(-1 * %i * i * w);
+end
+subplot(411);
+plot(fd, H);
+Hmag = abs(H);
+disp(Hmag);
+subplot(412);
+plot(fd, Hmag);
+subplot(413);
+Hphase = atan(imag(H)./real(H));
+plot2d3(fd, Hphase);
+plot(fd, Hphase);
+subplot(414);
+Hphase_unwrap = unwrap(Hphase, %pi);
+plot2d3(fd, Hphase_unwrap);
+plot(fd, Hphase_unwrap);
