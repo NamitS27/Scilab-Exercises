@@ -6,5 +6,5 @@ n = 0 : dn : 10;
 
 x = sin(2*%pi*(1/11)*n);
 plot2d3(n, x);
-y = sum(x) / 11;
+y = sum(x) / length(n);
 disp(y);

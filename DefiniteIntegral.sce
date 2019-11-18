@@ -1,3 +1,5 @@
+clear;
+clf;
 clc;
 ts = 0;
 te = 2;

@@ -3,7 +3,7 @@
 
 clear;
 clf;
-
+clc;
 // clear previous graph and plots
 dt = 1/1000;
 t = -1:dt:1;

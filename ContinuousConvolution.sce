@@ -10,6 +10,7 @@ Nx = length(tx);
 Ny = length(ty); 
 x = ones(1,Nx);  
 y = ones(1,Ny);  
+disp(x,y)
 z = dt*conv(x,y);  
 Nz = length(z);  
 Sz = Sx+Sy;  

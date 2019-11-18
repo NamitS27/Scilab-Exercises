@@ -1,5 +1,5 @@
 
- clc;  
+clc;  
 x = [1 2 3 ]; 
 y = [6 4 5 8 ];  
 [z,IZ] = xcorr(x,y); 
