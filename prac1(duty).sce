@@ -1,0 +1,17 @@
+clear;
+clf;
+clc;
+x=[ones(1:5),zeros(1:95)];
+y=[ones(1:50),zeros(1:50)];
+xf=fft(x);
+yf=fft(y);
+xfa=abs(xf);
+yfa=abs(yf);
+subplot(211);
+plot2d3(xfa);
+xgrid(4);
+title("Spectrum of pluse waveform with 5% duty cycle","fontsize",4);
+subplot(212);
+plot2d3(yfa);
+xgrid(4);
+title("Spectrum of pluse waveform with 50% duty cycle","fontsize",4);
